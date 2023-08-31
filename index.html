@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <link rel="stylesheet" href="style.css">
+
+  <title>Document</title>
+</head>
+
+<body>
+  <header>
+    <div class="app-title_container">
+      <h1>Gestor de Almacenamiento</h1>
+    </div>
+  </header>
+  <main>
+    <div class="app_container">
+      <div class="control-panel_container">
+        <div class="form-select_container">
+          <h2>Tipo de movimiento</h2>
+          <select id="select-form">
+            <option value="0">Opciones</option>
+            <option value="add-item_form">Agregar</option>
+            <option value="remove-item_form">Quitar</option>
+            <option value="move-item_form">Mover</option>
+          </select>
+        </div>
+        <div class="forms_container">
+          <!--FORMULARIO PARA AGREGAR UN ITEM-->
+          <form id="add-item_form">
+            <h2>Agregar Ítem</h2>
+            <label for="item-name">Nombre del ítem:</label>
+            <input type="text" class="item-name" name="item-name" required>
+
+            <label for="item-amount">Cantidad:</label>
+            <input type="number" class="item-amount" name="item-amount" required>
+
+            <label for="destiny">Destino</label>
+            <select name="destiny" class="destiny-deposit">
+              <option value="d0">Depósito</option>
+              <option value="d1">General</option>
+              <option value="d2">Reserva</option>
+              <option value="d3">Producción</option>
+            </select>
+
+            <input type="submit" value="Agregar ítem">
+          </form>
+
+          <!--FORMULARIO PARA QUITAR UN ITEM-->
+          <form id="remove-item_form">
+            <h2>Quitar Ítem</h2>
+            <label for="item-name">Nombre del ítem:</label>
+            <input type="text" class="item-name" name="item-name" required>
+
+            <label for="item-amount">Cantidad:</label>
+            <input type="number" class="item-amount" name="item-amount" required>
+
+            <label for="origin">Origen</label>
+            <select name="origin" class="origin-deposit">
+              <option value="d0">Depósito</option>
+              <option value="d1">General</option>
+              <option value="d2">Reserva</option>
+              <option value="d3">Producción</option>
+            </select>
+
+            <input type="submit" value="Quitar ítem">
+          </form>
+
+          <!--FORMULARIO PARA MOVER UN ITEM-->
+          <form id="move-item_form">
+            <h2>Mover Ítem</h2>
+            <label for="item-name">Nombre del ítem:</label>
+            <input type="text" class="item-name" name="item-name" required>
+
+            <label for="item-amount">Cantidad:</label>
+            <input type="number" class="item-amount" name="item-amount" required>
+
+            <label for="origin">Origen</label>
+            <select name="origin" class="origin-deposit">
+              <option value="d0">Depósito</option>
+              <option value="d1">General</option>
+              <option value="d2">Reserva</option>
+              <option value="d3">Producción</option>
+            </select>
+
+            <label for="destiny">Destino</label>
+            <select name="destiny" class="destiny-deposit">
+              <option value="d0">Depósito</option>
+              <option value="d1">General</option>
+              <option value="d2">Reserva</option>
+              <option value="d3">Producción</option>
+            </select>
+
+            <input type="submit" value="Mover ítem">
+          </form>
+        </div>
+      </div>
+      <!------------------------------------------------------------------------------------------------>
+      <div class="deposit-panel_container">
+        <div id="d1">
+          <h2>Depósito General</h2>
+
+        </div>
+        <div id="d2">
+          <h2>Depósito Reserva</h2>
+
+        </div>
+        <div id="d3">
+          <h2>Depósito Producción</h2>
+
+        </div>
+      </div>
+      <!------------------------------------------------------------------------------------------------>
+      <div class="save-button_container">
+        <button id="save-button">Guardar Cambios</button>
+        <button id="load-button">Cargar Datos</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+
+</html>

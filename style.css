@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+}
+
+.app-title_container {
+  text-align: center;
+  padding: 16px;
+}
+
+h2 {
+  padding-bottom: 8px;
+}
+
+.form-select_container {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 16px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+}
+
+label {
+  margin-bottom: 8px;
+  width: 100%;
+}
+
+.forms_container form {
+  display: none;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="submit"] {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+
+.app_container {
+  display: flex;
+  justify-content: space-between;
+  margin: 32px auto;
+  max-width: 70%;
+  background-color: white;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.control-panel_container {
+  flex: 1;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.deposit-panel_container {
+  flex: 3;
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+  border-left: 1px solid #ccc;
+}
+
+#d1,
+#d2,
+#d3 {
+  flex: 1;
+}
+
+.save-button_container {
+  text-align: center;
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#save-button,
+#load-button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#save-button:hover,
+#load-button:hover {
+  background-color: #0056b3;
+}
